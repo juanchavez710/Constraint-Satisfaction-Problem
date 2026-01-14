@@ -1,4 +1,3 @@
-[readme.txt](https://github.com/user-attachments/files/24603929/readme.txt)
 CSP Solver - README
 Overview
 This is a hierarchical Constraint Satisfaction Problem (CSP) solver for three nested problems involving 13 integer variables {A, B, C, D, E, F, G, H, I, J, K, L, M} with domains in {1, ..., 120}.
