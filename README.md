@@ -82,17 +82,17 @@ F,5
 Problem Definitions
 Problem A (C1-C5)
 Variables: A, B, C, D, E, F
-* C1: A = B� - C�
+* C1: A = B^2 - C^2
 * C2: C + E > B
-* C3: D = B� - 4*A
-* C4: (B-C)� = EFB - 396
+* C3: D = B^2 - 4*A
+* C4: (B-C)^2 = EFB - 396
 * C5: C + D + E + F < 125
 Problem B (C1-C12)
 Variables: A, B, C, D, E, F, G, H, I, J
 * C1-C5: Same as Problem A
-* C6: (G+I)� - 4 = (H-A)�
+* C6: (G+I)^3 - 4 = (H-A)^2
 * C7: CEF + 40 = (H-F-I)*(I+G)
-* C8: (C+I)� = BE(I+3)
+* C8: (C+I)^2 = BE(I+3)
 * C9: G + I < E + 3
 * C10: D + H > 180
 * C11: J < D + E + F
@@ -101,10 +101,10 @@ Problem C (C1-C17)
 Variables: A, B, C, D, E, F, G, H, I, J, K, L, M
 * C1-C12: Same as Problem B
 * C13: KLM = B*(K+5)
-* C14: F� = K�*(L-29) + 25
-* C15: HM� = LG - 3
+* C14: F^3 = K^2*(L-29) + 25
+* C15: HM^2 = LG - 3
 * C16: J + M = (L-15)*(E+G)
-* C17: K� = (J-4)*(L-20)
+* C17: K^3 = (J-4)*(L-20)
 Algorithm Details
 Search Strategy
 1. Algebraic Elimination: 6 variables (A, D, F, H, L, M) are computed directly from other variables
@@ -325,8 +325,8 @@ if found:
     # Check specific relationships
     A, B, C = sol['A'], sol['B'], sol['C']
     print(f"\nKey relationships:")
-    print(f"  B� - C� = {B**2 - C**2} (should equal A={A})")
-    print(f"  -3B� + 4C� = {-3*B**2 + 4*C**2} (should equal D={sol['D']})")
+    print(f"  B**2 - C**2 = {B**2 - C**2} (should equal A={A})")
+    print(f"  -3B**2 + 4C**2 = {-3*B**2 + 4*C**2} (should equal D={sol['D']})")
 FAQ
 Q: Why does the solver stop at the first solution?
 A: As specified in the requirements, the solver terminates upon finding the first valid solution to minimize nva.
